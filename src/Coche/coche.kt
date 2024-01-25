@@ -1,109 +1,179 @@
-package Coche
-
-import java.awt.Color
-import java.util.*
-
+/**
+ * Clase que representa un coche con diversas propiedades como color, marca, modelo,
+ * número de caballos, número de puertas y matrícula.
+ */
 class coche {
+
     private var color = ""
+
+    /**
+     * Obtiene el color actual del coche.
+     * @return Cadena que representa el color del coche.
+     */
     fun getColor(): String {
         return this.color
     }
+
+    /**
+     * Establece el color del coche. Si el color proporcionado es nulo, se establece
+     * el color por defecto como "Blanco".
+     * @param color Cadena que representa el color del coche.
+     */
     fun setColor(color: String?) {
-            if (color == null){
-                this.color = "Blanco"
-            }else{this.color = color}
+        if (color == null) {
+            this.color = "Blanco"
+        } else {
+            this.color = color
         }
+    }
 
     private var marca = ""
+
+    /**
+     * Obtiene la marca actual del coche.
+     * @return Cadena que representa la marca del coche.
+     */
     fun getMarca(): String {
         return this.marca
     }
-    fun setMarca(marca: String) {
-        this.marca = marca.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
+    /**
+     * Establece la marca del coche convirtiendo la primera letra a mayúscula.
+     * @param marca Cadena que representa la marca del coche.
+     */
+    fun setMarca(marca: String) {
+        this.marca = marca.lowercase().replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase() else it.toString()
+        }
     }
+
 
     private var modelo = ""
+
+    /**
+     * Establece el modelo del coche convirtiendo la primera letra a mayúscula.
+     * @param modelo Cadena que representa el modelo del coche.
+     */
     fun setModelo(modelo: String) {
-        this.modelo = modelo.lowercase().replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        this.modelo = modelo.lowercase().replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase() else it.toString()
+        }
     }
+
+    /**
+     * Obtiene el modelo actual del coche.
+     * @return Cadena que representa el modelo del coche.
+     */
     fun getModelo(): String {
         return this.modelo
     }
+
+
     private var Ncaballos = 0
 
-
+    /**
+     * Establece el número de caballos del coche con validación.
+     * Si el valor está fuera del rango permitido (70-700), solicita un valor válido al usuario.
+     * @param Ncaballos Número de caballos del coche.
+     */
     fun setNcaballos(Ncaballos: Int) {
-     do {
-         try {
-             if (Ncaballos >= 70 && Ncaballos <= 700 ) {
-                 this.Ncaballos=Ncaballos
-                 break
-             } else {
-                 print("ERROR en el coche $marca $modelo\nLos caballos no pueden ser menores a 70 o mayores a 700.\nIntroduzca uno valido => ")
-                 this.Ncaballos = readln().toInt()
-             }
-             if(this.Ncaballos >= 70 && this.Ncaballos<=700){break}
-         } catch (_: NumberFormatException) {
-             println("Dato no valido")
-         }
-     }while (true)
+        do {
+            try {
+                if (Ncaballos >= 70 && Ncaballos <= 700) {
+                    this.Ncaballos = Ncaballos
+                    break
+                } else {
+                    print("ERROR en el coche $marca $modelo\nLos caballos no pueden ser menores a 70 o mayores a 700.\nIntroduzca uno valido => ")
+                    this.Ncaballos = readln().toInt()
+                }
+                if (this.Ncaballos >= 70 && this.Ncaballos <= 700) break
+            } catch (_: NumberFormatException) {
+                println("Dato no válido")
+            }
+        } while (true)
     }
 
+    /**
+     * Obtiene el número de caballos actual del coche.
+     * @return Número de caballos del coche.
+     */
     fun getNcaballos(): Int {
         return this.Ncaballos
     }
+
+
     private var Npuertas = 0
 
+    /**
+     * Establece el número de puertas del coche con validación.
+     * Si el valor está fuera del rango permitido (3-5), solicita un valor valido al usuario.
+     * @param Npuertas Numero de puertas del coche.
+     */
     fun setNpuertas(Npuertas: Int) {
         do {
             try {
-                if (Npuertas >= 3 && Npuertas <= 5 ) {
-                    this.Npuertas=Npuertas
+                if (Npuertas >= 3 && Npuertas <= 5) {
+                    this.Npuertas = Npuertas
                     break
                 } else {
-                    print("ERROR en el coche $marca $modelo\nLas puertas no pueden ser menores a 3 o mayores a 5.\nIntroduzca uno valido => ")
+                    print("ERROR en el coche $marca $modelo\nLas puertas no pueden ser menores a 3 o mayores a 5.\nIntroduzca uno válido => ")
                     this.Npuertas = readln().toInt()
                 }
-                if(this.Npuertas >= 3 && this.Npuertas<=5){break}
+                if (this.Npuertas >= 3 && this.Npuertas <= 5) break
             } catch (_: NumberFormatException) {
-                println("Dato no valido")
+                println("Dato no válido")
             }
-        }while (true)
+        } while (true)
     }
 
-    fun getNpuertas():Int {
-       return this.Npuertas
+    /**
+     * Obtiene el numero de puertas actual del coche.
+     * @return Numero de puertas del coche.
+     */
+    fun getNpuertas(): Int {
+        return this.Npuertas
     }
+
     private var matricula = ""
 
-    fun  setMatricula(matricula:String) {
+    /**
+     * La matrícula debe tener exactamente 7 caracteres.
+     * Si no cumple con esta condición, solicita una matrícula válida al usuario.
+     * @param matricula Matrícula del coche.
+     */
+    fun setMatricula(matricula: String) {
         do {
             try {
-                if (matricula.length == 7 ) {
-                    this.matricula=matricula
+                if (matricula.length == 7) {
+                    this.matricula = matricula
                     break
                 } else {
-                    print("ERROR en el coche $marca $modelo\nLa matricula no puede tener un numero diferente a 7 caracteres.\nIntroduzca uno valido => ")
+                    print("ERROR en el coche $marca $modelo\nLa matrícula no puede tener un número diferente a 7 caracteres.\nIntroduzca uno válido => ")
                     this.matricula = readln()
                 }
-                if(this.matricula.length == 7 ){break}
+                if (this.matricula.length == 7) break
             } catch (_: Exception) {
-                println("Dato no valido")
+                println("Dato no válido")
             }
-        }while (true)
-        this.matricula = matricula
+        } while (true)
     }
 
+    /**
+     * Obtiene la matrícula actual del coche.
+     * @return Matrícula del coche.
+     */
     fun getMatricula(): String {
         return this.matricula
     }
 
-    fun cambiarColor(){
+    /**
+     * Cambia el color del coche de manera aleatoria.
+     */
+    fun cambiarColor() {
         val nums = 0..6
         val randomNum = nums.random()
 
-        when (randomNum){
+        when (randomNum) {
             0 -> this.color = "Rojo"
             1 -> this.color = "Azul"
             2 -> this.color = "Verde"
@@ -116,7 +186,8 @@ class coche {
 
 
     }
-    override fun toString(): String {
-        return "Tienes un $marca $modelo de color $color con $Npuertas puertas , $Ncaballos caballos y la matricula es $matricula"
-    }
-}
+                override fun toString(): String {
+                    return "Tienes un $marca $modelo de color $color con $Npuertas puertas , $Ncaballos caballos y la matricula es $matricula"
+                }
+            }
+

@@ -1,5 +1,7 @@
 package Coche
 
+import coche
+
 fun main(){
 
     val coche1 = coche()

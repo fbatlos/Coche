@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb9e9b4-7132-49b9-b77e-239d40eed147" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coche.iml" afterDir="false" />
+    <list default="true" id="bbb9e9b4-7132-49b9-b77e-239d40eed147" name="Changes" comment="Repositorio de coche cambiado">
+      <change beforePath="$PROJECT_DIR$/src/Coche/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coche/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coche/coche.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coche/coche.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +43,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706179376758</updated>
     </task>
+    <task id="LOCAL-00001" summary="Repositorio de coche cambiado">
+      <option name="closed" value="true" />
+      <created>1706181867420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706181867420</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Repositorio de coche cambiado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repositorio de coche cambiado" />
   </component>
 </project>
