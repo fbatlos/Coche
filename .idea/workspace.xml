@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb9e9b4-7132-49b9-b77e-239d40eed147" name="Changes" comment="Repositorio de coche cambiado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Coche/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coche/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Coche/coche.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coche/coche.kt" afterDir="false" />
     </list>
@@ -16,9 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2bRYUX6g3ifzdKKWea9oElWR3XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,6 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>

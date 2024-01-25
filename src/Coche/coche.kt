@@ -6,10 +6,6 @@ class coche {
 
     private var color = ""
 
-    /**
-     * Obtiene el color actual del coche.
-     * @return Cadena que representa el color del coche.
-     */
     fun getColor(): String {
         return this.color
     }
@@ -17,11 +13,11 @@ class coche {
     /**
      * Establece el color del coche. Si el color proporcionado es nulo, se establece
      * el color por defecto como "Blanco".
-     * @param color Cadena que representa el color del coche.
+     * @param color el color del coche.
      */
     fun setColor(color: String?) {
-        if (color == null) {
-            this.color = "Blanco"
+        if (color == null || color == "Blanco") {
+            this.color = cambiarColor().toString()
         } else {
             this.color = color
         }
@@ -29,17 +25,13 @@ class coche {
 
     private var marca = ""
 
-    /**
-     * Obtiene la marca actual del coche.
-     * @return Cadena que representa la marca del coche.
-     */
     fun getMarca(): String {
         return this.marca
     }
 
     /**
      * Establece la marca del coche convirtiendo la primera letra a mayúscula.
-     * @param marca Cadena que representa la marca del coche.
+     * @param marca la marca del coche.
      */
     fun setMarca(marca: String) {
         this.marca = marca.lowercase().replaceFirstChar {
@@ -60,10 +52,6 @@ class coche {
         }
     }
 
-    /**
-     * Obtiene el modelo actual del coche.
-     * @return Cadena que representa el modelo del coche.
-     */
     fun getModelo(): String {
         return this.modelo
     }
@@ -93,10 +81,6 @@ class coche {
         } while (true)
     }
 
-    /**
-     * Obtiene el número de caballos actual del coche.
-     * @return Número de caballos del coche.
-     */
     fun getNcaballos(): Int {
         return this.Ncaballos
     }
@@ -126,10 +110,6 @@ class coche {
         } while (true)
     }
 
-    /**
-     * Obtiene el numero de puertas actual del coche.
-     * @return Numero de puertas del coche.
-     */
     fun getNpuertas(): Int {
         return this.Npuertas
     }
@@ -145,6 +125,8 @@ class coche {
         do {
             try {
                 if (matricula.length == 7) {
+                    val primerosCuatro = matricula.substring(0,4).toInt()
+                    val elresto = matricula.substring(5,7)
                     this.matricula = matricula
                     break
                 } else {
@@ -157,11 +139,6 @@ class coche {
             }
         } while (true)
     }
-
-    /**
-     * Obtiene la matrícula actual del coche.
-     * @return Matrícula del coche.
-     */
     fun getMatricula(): String {
         return this.matricula
     }
@@ -182,9 +159,6 @@ class coche {
             5 -> this.color = "Naranja"
             6 -> this.color = "Gris"
         }
-
-
-
     }
                 override fun toString(): String {
                     return "Tienes un $marca $modelo de color $color con $Npuertas puertas , $Ncaballos caballos y la matricula es $matricula"
